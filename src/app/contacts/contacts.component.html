@@ -1,0 +1,15 @@
+<p>
+    <mat-toolbar color="primary">
+      <span>PhoneBook</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button (click)="openDialog()"> Add Contact </button>
+      <button mat-icon-button (click)="logOut()" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+
+
+  <h2 style="margin-left: 15px;">Welcome {{userName}}</h2>
+
+  <app-table-test></app-table-test>

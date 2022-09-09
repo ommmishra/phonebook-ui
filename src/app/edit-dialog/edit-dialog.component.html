@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Add New Contact</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]= "eForm">
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Name" [(ngModel)]="data.name" formControlName="name" type="text" autocomplete="off">
+                <!-- <mat-error *ngIf="rForm.controls?.['name']?.touched && rForm.controls?.['name']?.['invalid']">
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Phone Number" [(ngModel)]="data.phone_number" formControlName="phoneNumber" type="numeric" autocomplete="off">
+                <!-- <mat-error *ngIf="rForm.controls?.['phoneNumber']?.touched && rForm.controls?.['phoneNumber']?.['invalid']">
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <input matInput placeholder="Email" [(ngModel)]="data.email" formControlName="email" type="email" autocomplete="off">
+                <!-- <mat-error *ngIf="rForm.controls?.['email']?.touched && rForm.controls?.['email']?.['invalid']">  
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+        <!-- <button mat-raised-button type="submit" [disabled]="rForm.invalid" color="primary" style="width: 60%;">Register</button> -->
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [disabled]="eForm.invalid" [mat-dialog-close]="eForm.value">CONFIRM</button>
+</mat-dialog-actions>

@@ -1,0 +1,12 @@
+.change{
+    background-color: rgb(236, 226, 226);
+    height: 30px;
+    width: 30px;
+    color: black;
+    /* border-radius: 50%; */
+}
+
+mat-form-field{
+    width: 65%;
+}
+
